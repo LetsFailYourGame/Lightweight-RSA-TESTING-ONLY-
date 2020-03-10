@@ -4,13 +4,13 @@
 unsigned int RSA::power(int base, unsigned int exp, int modulo)
 {
 	unsigned long long int res = 1;  
-	x = x % p;  
-	while (y > 0)
+	base = base % p;
+	while (exp > 0)
 	{
-		if (y & 1)
-			res = (res * x) % p;
-		y = y >> 1; 
-		x = (x * x) % p;
+		if (exp & 1)
+			res = (res * base) % p;
+		exp = exp >> 1;
+		base = (base * base) % p;
 	}
 	return res;
 }
