@@ -3,7 +3,7 @@
 
 unsigned int RSA::power(int base, unsigned int exp, int modulo)
 {
-	unsigned long long int res = 1;  
+	long long int res = 1;  
 	base = base % p;
 	while (exp > 0)
 	{
