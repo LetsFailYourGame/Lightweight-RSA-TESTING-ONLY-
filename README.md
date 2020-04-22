@@ -1,6 +1,6 @@
 # Lightweight-RSA-TESTING-ONLY-
 
-### CLASS::RSA::CONSTRUCTOR (p , q , e )
+### RSA::CONSTRUCTOR (p , q , e )
 
     RSA rsa(277, 117, 73);
 
