@@ -8,7 +8,7 @@ unsigned long RSA::power(long b, long x, long n)
 		if (x % 2 != 0) z = (z * b) % n;
 		b = (b * b) % n; x = x / 2;
 	}
-	return z;
+	return z; 
 }
 
 unsigned int RSA::gcd(unsigned int a, unsigned int b)
