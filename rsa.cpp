@@ -5,9 +5,9 @@ unsigned long RSA::power(long b, long x, long n)
 {
 	long z = 1; b = b % n;
 	while (x != 0) {
-		if (x % 2 != 0) z = (z * b) % n; // Exponent ungerade
+		if (x % 2 != 0) z = (z * b) % n;
 		b = (b * b) % n; x = x / 2;
-	} // while
+	}
 	return z;
 }
 
