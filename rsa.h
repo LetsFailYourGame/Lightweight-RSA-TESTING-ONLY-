@@ -3,7 +3,7 @@
 #include <math.h>
 
 class RSA
-{
+{ 
 	private:
 		unsigned int p, q, e, n, phi_n, d, message = 0, cipher = 0;
 	public:
