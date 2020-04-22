@@ -1,18 +1,14 @@
 #include "rsa.h"
 #include "pch.h"
 
-unsigned int RSA::power(int base, unsigned int exp, int modulo)
+unsigned long RSA::power(long b, long x, long n)
 {
-	long long int res = 1;  
-	base = base % p;
-	while (exp > 0)
-	{
-		if (exp & 1)
-			res = (res * base) % p;
-		exp = exp >> 1;
-		base = (base * base) % p;
-	}
-	return res;
+	long z = 1; b = b % n;
+	while (x != 0) {
+		if (x % 2 != 0) z = (z * b) % n; // Exponent ungerade
+		b = (b * b) % n; x = x / 2;
+	} // while
+	return z;
 }
 
 unsigned int RSA::gcd(unsigned int a, unsigned int b)

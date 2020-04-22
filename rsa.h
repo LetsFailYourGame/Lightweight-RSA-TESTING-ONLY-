@@ -6,8 +6,9 @@ class RSA
 {
 	private:
 		unsigned int p, q, e, n, phi_n, d, message = 0, cipher = 0;
-		unsigned int power(int x, unsigned int y, int p);
 	public:
+
+		unsigned long power(long b, long x, long n);
 		unsigned int gcd(unsigned int a, unsigned int b);
 		unsigned int mul_inv(unsigned int a, unsigned int b);
 		unsigned int encrypt(unsigned int msg, unsigned int pubKey[]);
